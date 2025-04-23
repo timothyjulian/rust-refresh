@@ -1,11 +1,10 @@
+mod enumer;
 mod ownership;
 mod recursive;
 mod slice;
 mod struct_type;
 
-fn main() {
-}
-
+fn main() {}
 
 #[test]
 fn hello_test() {
@@ -90,7 +89,7 @@ fn string_type() {
 }
 
 #[test]
-fn data_copy_ownership(){
+fn data_copy_ownership() {
     let a = 10;
     let mut b = a; //copy data
 
@@ -100,13 +99,9 @@ fn data_copy_ownership(){
 }
 
 #[test]
-fn if_let_test(){
+fn if_let_test() {
     let value = 9;
-    let result = if value >= 8 {
-        "Good"
-    } else {
-        "Hehe"
-    };
+    let result = if value >= 8 { "Good" } else { "Hehe" };
 
     println!("{}", result);
 }
@@ -129,7 +124,7 @@ fn loop_return_value() {
     let result = loop {
         counter += 1;
         if counter >= 5 {
-            break counter*5;
+            break counter * 5;
         }
     };
 
@@ -141,7 +136,6 @@ fn range() {
     let range = 0..5;
     range.for_each(|x| println!("{x}"));
 }
-
 
 #[test]
 fn range_inclusive() {

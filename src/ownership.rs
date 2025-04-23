@@ -1,5 +1,5 @@
 #[test]
-fn transfer_ownership(){
+fn transfer_ownership() {
     let name1 = String::from("Timothy");
     let name2 = name1; // ownership moved here
 
@@ -20,7 +20,7 @@ fn print_ownership(name: String) {
 fn test_ownership() {
     let name = String::from("Tim");
     print_ownership(name); // takes ownership
-    // println!("{}", name); // error here
+                           // println!("{}", name); // error here
 }
 
 fn return_ownership(first_name: String, second_name: String) -> String {
@@ -34,7 +34,6 @@ fn test_return_ownership() {
     println!("{}", name);
 }
 
-
 fn return_borrow(first_name: &String, second_name: &String) -> String {
     // first_name.push_str("haha"); // by default reference is immutable, even though the owner is mutable
     format!("{} {}", first_name, second_name)
@@ -43,7 +42,7 @@ fn return_borrow(first_name: &String, second_name: &String) -> String {
 #[test]
 fn test_return_ownership_with_ref() {
     let mut first_name = String::from("Tim");
-    let name = return_borrow(&first_name,&String::from("Jul")); // reference passed
+    let name = return_borrow(&first_name, &String::from("Jul")); // reference passed
 
     println!("{}", name);
 }

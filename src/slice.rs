@@ -1,6 +1,6 @@
 #[test]
 fn slice_reference() {
-    let array = [1,2,3,4,5,6,7,8,9,10];
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let slice1 = &array[..];
     println!("{:?}", slice1);
 
@@ -13,7 +13,7 @@ fn slice_reference() {
 }
 
 #[test]
-fn string_slice(){
+fn string_slice() {
     let name = String::from("Timothy Julian");
     let first_name = &name[0..7];
     println!("{}", first_name);
