@@ -3,7 +3,10 @@ mod ownership;
 mod recursive;
 mod slice;
 mod struct_type;
-
+mod traits;
+mod generic;
+mod overload_operator;
+mod options;
 fn main() {}
 
 #[test]

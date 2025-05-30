@@ -13,7 +13,7 @@ fn print_person(person: &Person) {
 }
 
 impl Person {
-    fn say_hello(&self, name: &str) {
+    pub fn say_hello(&self, name: &str) {
         println!("Hello {}, I'm {}", name, self.first_name);
     }
 }
