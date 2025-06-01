@@ -7,6 +7,8 @@ mod traits;
 mod generic;
 mod overload_operator;
 mod options;
+mod comparing;
+
 fn main() {}
 
 #[test]
