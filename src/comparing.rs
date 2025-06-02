@@ -1,6 +1,5 @@
-
 struct Apple {
-    quantity: i32
+    quantity: i32,
 }
 
 impl PartialEq for Apple {
@@ -17,8 +16,8 @@ impl PartialOrd for Apple {
 
 #[test]
 fn test_compare() {
-    let apple1 = Apple {quantity: 10};
-    let apple2 = Apple {quantity: 2};
+    let apple1 = Apple { quantity: 10 };
+    let apple2 = Apple { quantity: 2 };
     println!("Apple 1 == Apple 2 {}", apple1 == apple2);
     println!("Apple 1 > Apple 2 {}", apple1 > apple2);
     println!("Apple 1 < Apple 2 {}", apple1 < apple2);

@@ -1,7 +1,7 @@
 use std::ops::Add;
 
 struct Apple {
-    quantity: i32
+    quantity: i32,
 }
 
 impl Add for Apple {
@@ -16,13 +16,9 @@ impl Add for Apple {
 
 #[test]
 fn test_add() {
-    let apple_1 = Apple {
-        quantity: 1
-    };
+    let apple_1 = Apple { quantity: 1 };
 
-    let apple_2 = Apple {
-        quantity: 2
-    };
+    let apple_2 = Apple { quantity: 2 };
 
     // let apple_sum = apple_1.add(apple_2);
     // println!("{}", apple_sum.quantity);

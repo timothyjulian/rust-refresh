@@ -1,13 +1,14 @@
+mod comparing;
 mod enumer;
+mod format;
+mod generic;
+mod options;
+mod overload_operator;
 mod ownership;
 mod recursive;
 mod slice;
 mod struct_type;
 mod traits;
-mod generic;
-mod overload_operator;
-mod options;
-mod comparing;
 
 fn main() {}
 
@@ -180,7 +181,6 @@ fn test_factorial_loop() {
     let result: i32 = factorial_loop(-10);
     println!("{}", result);
 }
-
 
 #[test]
 fn test_string_manipulation() {

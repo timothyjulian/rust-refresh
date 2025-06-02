@@ -40,7 +40,6 @@ fn test_payment_pattern() {
     _payment.pay(9999);
 }
 
-
 #[test]
 fn test_pattern_value() {
     let val = String::from("TEST");
@@ -95,7 +94,11 @@ fn test_struct_patterns() {
     };
 
     match person {
-        Person { first_name, last_name, .. } => {
+        Person {
+            first_name,
+            last_name,
+            ..
+        } => {
             println!("{} {}", first_name, last_name);
         }
     }
@@ -118,13 +121,9 @@ fn test_match_expression() {
 
     let result = match value {
         0 => "nol",
-        1 => {
-            "satu"
-        }
-        2 => {
-            "dua"
-        }
-        _ => "invalid"
+        1 => "satu",
+        2 => "dua",
+        _ => "invalid",
     };
 
     println!("{}", result);

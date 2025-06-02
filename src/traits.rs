@@ -1,7 +1,7 @@
 use crate::struct_type::Person;
 
-pub struct SimplePerson{
-    pub name: String
+pub struct SimplePerson {
+    pub name: String,
 }
 
 trait CanSayHello {
@@ -34,7 +34,7 @@ impl CanSayHello for Person {
     fn say_hello_to(&self, name: &str) -> String {
         format!("Hello, {} my name is {}", name, self.first_name)
     }
-    
+
     fn say_hello(&self, name: &str) {
         println!("Hello, {}, i', from trait", name);
     }
@@ -70,16 +70,15 @@ fn say_goodbye_and_hello(value: &(impl CanSayHello + CanSayGoodbye)) {
 }
 
 fn create_simple_person(name: String) -> impl CanSayGoodbye {
-    SimplePerson {name}
+    SimplePerson { name }
 }
-
 
 #[test]
 fn trait_test() {
     let person = Person {
         first_name: String::from("Timo"),
         last_name: String::from("Jul"),
-        age: 12
+        age: 12,
     };
 
     println!("{}", person.say_hello_to("Eko"));
@@ -87,16 +86,15 @@ fn trait_test() {
     println!("{}", person.hello());
 
     // for overriding method
-    CanSayHello::say_hello(&person, "wkwk");    
+    CanSayHello::say_hello(&person, "wkwk");
     Person::say_hello(&person, "wkwkw");
-
 
     say_hello_trait(&person);
     say_goodbye_and_hello(&person);
 }
 
 #[test]
-fn test_impl_trait(){
+fn test_impl_trait() {
     let simple_person = create_simple_person(String::from("timo"));
     println!("{}", simple_person.say_goodbye());
 }
