@@ -180,3 +180,20 @@ fn test_factorial_loop() {
     let result: i32 = factorial_loop(-10);
     println!("{}", result);
 }
+
+
+#[test]
+fn test_string_manipulation() {
+    let s = String::from("Timothy Julian");
+
+    println!("{}", s.to_uppercase());
+    println!("{}", s.to_lowercase());
+    println!("{}", s.len());
+    println!("{}", s.replace("Timothy", "Paulus"));
+    println!("{}", s.contains("Julian"));
+    println!("{}", s.starts_with("Tim"));
+    println!("{}", s.ends_with("Julian"));
+    println!("{}", s.trim());
+    println!("{}", &s[0..3]);
+    println!("{:?}", s.get(0..3));
+}
