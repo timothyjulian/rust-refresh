@@ -1,3 +1,4 @@
+mod closure;
 mod comparing;
 mod enumer;
 mod format;
