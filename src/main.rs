@@ -7,6 +7,7 @@ mod options;
 mod overload_operator;
 mod ownership;
 mod recursive;
+mod sequences;
 mod slice;
 mod struct_type;
 mod traits;
