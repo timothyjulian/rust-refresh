@@ -36,3 +36,28 @@ fn test_btree_map() {
         .iter()
         .for_each(|(key, value)| println!("{} {}", key, value));
 }
+
+
+#[test]
+fn test_btree_map_string() {
+    let mut btree_map = BTreeMap::<String, String>::new();
+    btree_map.insert("B".to_string(), String::from("test"));
+    btree_map.insert("C".to_string(), String::from("hihi"));
+    btree_map.insert("A".to_string(), String::from("haha"));
+
+    for (key, value) in &btree_map {
+        println!("{} {}", key, value);
+    }
+
+    println!("======");
+
+    btree_map
+        .iter()
+        .for_each(|tup| println!("{} {}", tup.0, tup.1));
+
+    println!("======");
+
+    btree_map
+        .iter()
+        .for_each(|(key, value)| println!("{} {}", key, value));
+}
