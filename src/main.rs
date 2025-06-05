@@ -12,6 +12,7 @@ mod sequences;
 mod slice;
 mod struct_type;
 mod traits;
+mod sets;
 
 fn main() {}
 
