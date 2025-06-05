@@ -3,6 +3,7 @@ mod comparing;
 mod enumer;
 mod format;
 mod generic;
+mod maps;
 mod options;
 mod overload_operator;
 mod ownership;
