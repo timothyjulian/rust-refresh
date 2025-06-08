@@ -13,6 +13,7 @@ mod slice;
 mod struct_type;
 mod traits;
 mod sets;
+mod lifetimes;
 
 fn main() {}
 
