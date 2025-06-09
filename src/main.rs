@@ -14,6 +14,7 @@ mod struct_type;
 mod traits;
 mod sets;
 mod lifetimes;
+mod attributes;
 
 fn main() {}
 
