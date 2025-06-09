@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Debug, PartialEq, PartialOrd, Clone)]
 struct Company {
     name: String,
     location: String,
@@ -14,4 +14,8 @@ fn test_attribute_debug() {
     };
 
     println!("{:?}", company);
+
+    let company2 = company.clone();
+
+    println!("{}", company == company2);
 }
