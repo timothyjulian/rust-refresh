@@ -16,6 +16,7 @@ mod slice;
 mod smart_pointer;
 mod struct_type;
 mod traits;
+mod drop;
 
 fn main() {}
 
