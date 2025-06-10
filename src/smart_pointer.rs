@@ -64,8 +64,9 @@ fn test_box_enum() {
 
 #[test]
 fn test_dereference() {
-    let value1 = Box::new(10);
+    let mut value1 = Box::new(10);
     let value2 = Box::new(3);
+    *value1 = 90;
 
     let result = *value1 * *value2;
     println!("{}", result)
@@ -98,5 +99,4 @@ fn test_multiple_ownership() {
     println!("{:?}", smartphone);
     println!("{:?}", laptop);
     println!("Apple reference count: {}", Rc::strong_count(&apple));
-
 }
