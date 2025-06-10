@@ -37,7 +37,6 @@ fn test_btree_map() {
         .for_each(|(key, value)| println!("{} {}", key, value));
 }
 
-
 #[test]
 fn test_btree_map_string() {
     let mut btree_map = BTreeMap::<String, String>::new();
