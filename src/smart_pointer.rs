@@ -1,3 +1,5 @@
+use std::ops::Deref;
+
 fn display_number(value: i32) {
     println!("{}", value);
 }
@@ -14,6 +16,22 @@ fn print_category(category: &ProductCategory) {
 enum ProductCategory {
     Of(String, Box<ProductCategory>),
     End,
+}
+
+struct MyValue<T> {
+    value: T,
+}
+
+impl<T> Deref for MyValue<T> {
+    type Target = T;
+
+    fn deref(&self) -> &Self::Target {
+        &self.value
+    }
+}
+
+fn say_hello(name: &String) {
+    println!("Hello {}", name);
 }
 
 #[test]
@@ -36,4 +54,28 @@ fn test_box_enum() {
     );
 
     print_category(&category);
+}
+
+#[test]
+fn test_dereference() {
+    let value1 = Box::new(10);
+    let value2 = Box::new(3);
+
+    let result = *value1 * *value2;
+    println!("{}", result)
+}
+
+#[test]
+fn test_dereference_struct() {
+    let val = MyValue { value: 9 };
+
+    println!("{}", *val);
+}
+
+#[test]
+fn test_dereference_coercion() {
+    let name = MyValue {
+        value: "String".to_string(),
+    };
+    say_hello(&name);
 }
