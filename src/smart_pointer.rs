@@ -1,4 +1,4 @@
-use std::{ops::Deref, rc::Rc};
+use std::{cell::RefCell, ops::Deref, rc::Rc};
 
 #[derive(Debug)]
 enum ProductCategory {
@@ -16,6 +16,12 @@ impl<T> Deref for MyValue<T> {
     fn deref(&self) -> &Self::Target {
         &self.value
     }
+}
+
+#[derive(Debug)]
+struct Seller {
+    name: RefCell<String>,
+    active: RefCell<bool>,
 }
 
 #[derive(Debug)]
@@ -99,4 +105,17 @@ fn test_multiple_ownership() {
     println!("{:?}", smartphone);
     println!("{:?}", laptop);
     println!("Apple reference count: {}", Rc::strong_count(&apple));
+}
+
+#[test]
+fn test_ref_cell() {
+    let seller = Seller {
+        name: RefCell::new("Timothy".to_string()),
+        active: RefCell::new(true)
+    };
+
+    let mut result = seller.name.borrow_mut();
+    *result = "Gio".to_string();
+
+    println!("{}", result);
 }
