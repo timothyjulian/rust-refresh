@@ -114,8 +114,10 @@ fn test_ref_cell() {
         active: RefCell::new(true)
     };
 
-    let mut result = seller.name.borrow_mut();
-    *result = "Gio".to_string();
+    {
+        let mut result = seller.name.borrow_mut();
+        *result = "Gio".to_string();
+    }
 
-    println!("{}", result);
+    println!("{:?}", seller);
 }
