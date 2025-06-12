@@ -19,6 +19,7 @@ mod smart_pointer;
 mod statics;
 mod struct_type;
 mod traits;
+mod error_handling;
 
 fn main() {}
 
