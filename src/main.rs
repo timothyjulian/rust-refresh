@@ -1,6 +1,7 @@
 mod attributes;
 mod closure;
 mod comparing;
+mod drop;
 mod enumer;
 mod format;
 mod generic;
@@ -14,9 +15,9 @@ mod sequences;
 mod sets;
 mod slice;
 mod smart_pointer;
+mod statics;
 mod struct_type;
 mod traits;
-mod drop;
 
 fn main() {}
 

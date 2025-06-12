@@ -80,9 +80,7 @@ fn test_dereference() {
 
 #[test]
 fn test_dereference_struct() {
-    let val = MyValue {
-        value: 9
-    };
+    let val = MyValue { value: 9 };
 
     println!("{}", *val);
 }
@@ -90,7 +88,7 @@ fn test_dereference_struct() {
 #[test]
 fn test_dereference_coercion() {
     let name = MyValue {
-        value: "String".to_string()
+        value: "String".to_string(),
     };
     say_hello(&name);
 }
@@ -111,7 +109,7 @@ fn test_multiple_ownership() {
 fn test_ref_cell() {
     let seller = Seller {
         name: RefCell::new("Timothy".to_string()),
-        active: RefCell::new(true)
+        active: RefCell::new(true),
     };
 
     {

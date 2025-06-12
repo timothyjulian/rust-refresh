@@ -1,5 +1,5 @@
 struct Book {
-    title: String
+    title: String,
 }
 
 impl Drop for Book {
@@ -11,7 +11,7 @@ impl Drop for Book {
 #[test]
 fn test_drop_cleanup() {
     let book = Book {
-        title: "Harry Potter".to_string()
+        title: "Harry Potter".to_string(),
     };
 
     println!("{}", book.title);
