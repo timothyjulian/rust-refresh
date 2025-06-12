@@ -6,6 +6,7 @@ mod enumer;
 mod format;
 mod generic;
 mod lifetimes;
+mod macros;
 mod maps;
 mod options;
 mod overload_operator;
