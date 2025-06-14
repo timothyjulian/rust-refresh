@@ -107,6 +107,9 @@ fn test_multiple_ownership() {
 
 #[test]
 fn test_ref_cell() {
+    let test = RefCell::new(0);
+    let mut a = test.borrow_mut();
+    *a = 9;
     let seller = Seller {
         name: RefCell::new("Timothy".to_string()),
         active: RefCell::new(true),
@@ -118,4 +121,5 @@ fn test_ref_cell() {
     }
 
     println!("{:?}", seller);
+    println!("{}", a);
 }
