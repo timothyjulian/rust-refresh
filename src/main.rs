@@ -21,7 +21,9 @@ mod struct_type;
 mod traits;
 mod error_handling;
 
-fn main() {}
+fn main() {
+    println!("testing how good is it");
+}
 
 #[test]
 fn hello_test() {
